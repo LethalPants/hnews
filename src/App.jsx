@@ -27,6 +27,7 @@ import Signup from './pages/Auth/Signup';
 import Login from './pages/Auth/Login';
 import EditProfile from './pages/Auth/EditProfile';
 import ForgotPass from './pages/Auth/Forgot';
+import Link from './pages/Link';
 
 import useAuth from './hooks/useAuth';
 import UserContext from './contexts/userContext';
@@ -75,12 +76,13 @@ const App = () => {
                             <Route path='/register' component={Signup} />
                             <Route path='/login' component={Login} />
                             <Route path='/forgot' component={ForgotPass} />
+                            <Route path='/link/:linkId' component={Link} />
                             <Route component={() => <Redirect to='/news' />} />
                         </IonRouterOutlet>
                         <IonTabBar slot='bottom'>
                             <IonTabButton tab='news' href='/news'>
                                 <IonIcon icon={newspaperOutline} />
-                                <IonLabel>Newsy</IonLabel>
+                                <IonLabel>News</IonLabel>
                             </IonTabButton>
                             <IonTabButton tab='trending' href='/trending'>
                                 <IonIcon icon={trendingUpOutline} />
