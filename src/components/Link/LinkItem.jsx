@@ -30,6 +30,7 @@ const LinkItem = ({ link, index, showCount, url, browser, handleUpVote }) => {
                         <IonBadge
                             style={{
                                 verticalAlign: 'middle',
+                                color: '#fff',
                             }}
                             slot='start'
                         >

@@ -12,7 +12,7 @@ import {
 } from '@ionic/react';
 
 import NavHeader from '../components/Header/NavHeader';
-import { closeCircleOutline } from 'ionicons/icons';
+import { trashOutline } from 'ionicons/icons';
 import LinkItem from '../components/Link/LinkItem';
 import CommentModal from '../components/Link/CommentModal';
 import LinkComment from '../components/Link/LinkComment';
@@ -118,7 +118,7 @@ const Link = (props) => {
             <NavHeader
                 title={link && link.description}
                 option={link && postedByAuthUser(link)}
-                icon={closeCircleOutline}
+                icon={trashOutline}
                 action={handleDeleteLink}
             />
             <IonContent>
