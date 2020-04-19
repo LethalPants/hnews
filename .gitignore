@@ -11,8 +11,10 @@
 # production
 /build
 
-#firebase config
+#firebase config and chace
 /src/firebase/config.js
+/.firebase
+.firebase/hosting.YnVpbGQ.cache
 
 
 # misc
@@ -26,3 +28,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
