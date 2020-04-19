@@ -9,19 +9,21 @@ import {
     IonText,
     IonItem,
 } from '@ionic/react';
+
 import {
-    linkOutline,
     chevronUpCircleOutline,
+    linkOutline,
     personCircleOutline,
     timeOutline,
     chatbubbleEllipsesOutline,
 } from 'ionicons/icons';
+
 import { getHostName } from '../../helpers/domain';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
-const LinkItem = ({ link, index, showCount, url, browser }) => {
+const LinkItem = ({ link, index, showCount, url, browser, handleUpVote }) => {
     return (
-        <IonCard routerLink={url} button onClick={browser}>
+        <IonCard routerLink={url}>
             <IonCardContent class='ion-no-padding'>
                 <IonList lines='none'>
                     <IonItem>
@@ -55,34 +57,41 @@ const LinkItem = ({ link, index, showCount, url, browser }) => {
                                     {getHostName(link.url)}
                                 </IonText>
                             </p>
-
-                            <div className='ion-padding-vertical ion-text-wrap'>
+                            <div
+                                className='ion-padding-vertical ion-text-wrap'
+                                onClick={browser}
+                            >
                                 <strong style={{ fontSize: '1rem' }}>
                                     {link.description}
                                 </strong>
                             </div>
-
+                            <IonIcon
+                                slot='icon-only'
+                                icon={chevronUpCircleOutline}
+                                color='primary'
+                                onClick={() => handleUpVote()}
+                                style={{
+                                    fontSize: '1em',
+                                    cursor: 'pointer',
+                                    marginBottom: '4px',
+                                }}
+                            />{' '}
                             <p
                                 style={{
+                                    display: 'inline-block',
                                     alignItems: 'center',
-                                    fontSize: '0.8 rem',
+                                    fontSize: '0.9 rem',
                                     fontWeight: 'normal',
                                 }}
                             >
-                                <IonIcon
-                                    icon={chevronUpCircleOutline}
-                                    style={{
-                                        verticalAlign: 'middle',
-                                    }}
-                                />{' '}
                                 <IonText
                                     style={{
                                         verticalAlign: 'middle',
                                     }}
                                 >
-                                    {link.voteCount} points
+                                    {link.voteCount}
                                 </IonText>
-                                {' | '}
+                                {'  |  '}
                                 <IonIcon
                                     icon={personCircleOutline}
                                     style={{

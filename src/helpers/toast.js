@@ -1,4 +1,4 @@
-export function toast(message, color = 'dark', duration = 4000) {
+export function toast(message, color = 'dark', duration = 2000) {
     const toast = document.createElement('ion-toast');
     toast.message = message;
     toast.duration = duration;
