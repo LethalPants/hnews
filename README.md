@@ -6,7 +6,7 @@ A hacker news clone which sources news from it's users. This app was built using
 
 <a href = 'https://hnews-2a163.firebaseapp.com/' target="_blank">Live Demo</a>
 
-<a href="http://stackoverflow.com" target="_blank">Go</a>
+<a href="http://stackoverflow.com" target="_blank"  rel="noopener">Go</a>
 ## About The Project
 
 ![HNews Screen Shot][product-screenshot]
