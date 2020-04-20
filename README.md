@@ -4,7 +4,7 @@ A hacker news clone which sources news from it's users. This app was built using
 
 [![MIT License][license-shield]][license-url] [![LinkedIn][linkedin-shield]][linkedin-url]
 
-[Live Demo](https://hnews-2a163.firebaseapp.com/){:target="_blank"}
+<a href = 'https://hnews-2a163.firebaseapp.com/' target="_blank">Live Demo</a>
 
 ## About The Project
 
